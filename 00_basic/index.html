@@ -12,11 +12,13 @@
         <meta name="author" content="kzrashi">
       
       
-        <link rel="canonical" href="https://kzrashi.github.io/vba-grammer/00_print/">
+        <link rel="canonical" href="https://kzrashi.github.io/vba-grammer/00_basic/">
       
       
         <link rel="prev" href="..">
       
+      
+        <link rel="next" href="../00_operate/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -24,7 +26,7 @@
     
     
       
-        <title>標準出力 - VBA Grammer</title>
+        <title>基本文法 - VBA Grammer</title>
       
     
     
@@ -104,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              標準出力
+              基本文法
             
           </span>
         </div>
@@ -217,7 +219,7 @@
           
   
   <span class="md-ellipsis">
-    標準出力
+    基本文法
   </span>
   
 
@@ -228,7 +230,7 @@
         
   
   <span class="md-ellipsis">
-    標準出力
+    基本文法
   </span>
   
 
@@ -250,9 +252,45 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#1" class="md-nav__link">
     <span class="md-ellipsis">
-      固定文字列の出力
+      1. デバッグ
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-if" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. if 文
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-for" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. for 文
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-switch" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. switch 文
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-while" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. while 文
     </span>
   </a>
   
@@ -262,6 +300,26 @@
   
 </nav>
       
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../00_operate/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    シート＆ブック操作
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -293,9 +351,45 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#1" class="md-nav__link">
     <span class="md-ellipsis">
-      固定文字列の出力
+      1. デバッグ
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-if" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. if 文
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-for" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. for 文
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-switch" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. switch 文
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-while" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. while 文
     </span>
   </a>
   
@@ -319,21 +413,97 @@
   
 
 
-<h1 id="_1">標準出力<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
-<p>print 関数を使うことで画面に文字や数値を出力することが出来ます。</p>
-<h3 id="_2">固定文字列の出力<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<h1 id="_1">基本文法<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<h2 id="1">1. デバッグ<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
 <ul>
 <li>print("出力したい文字列")や print(出力したい変数名)を指定出力します。</li>
 </ul>
 <div class="highlight"><pre><span></span><code>Debug.print &quot;test&quot;
 </code></pre></div>
+<h2 id="2-if">2. if 文<a class="headerlink" href="#2-if" title="Permanent link">&para;</a></h2>
 <ul>
-<li>for 文</li>
+<li>基本</li>
+</ul>
+<div class="highlight"><pre><span></span><code>If 条件式1 Then
+    処理1
+ElseIf 条件式2 Then
+    処理2
+ElseIf a = b Or _
+       c = d Then
+    処理3
+ElseIf a = b And _
+       c = d Then
+    処理4
+Else
+    処理2
+End If
+</code></pre></div>
+<h2 id="3-for">3. for 文<a class="headerlink" href="#3-for" title="Permanent link">&para;</a></h2>
+<ul>
+<li>for 文(途中で抜ける)</li>
 </ul>
 <div class="highlight"><pre><span></span><code>Dim i As Integer
 For i = 1 To 5
+
+    If Cells(2, 1).Value = &quot;br&quot; Then
+        Exit For
+    End If
+
     MsgBox &quot;こんにちは&quot;
+
 Next i
+</code></pre></div>
+<ul>
+<li>for 文(continue)
+  <code>Goto</code>を使う</li>
+</ul>
+<div class="highlight"><pre><span></span><code>Dim r As Long
+
+For r = 1 To 10
+    If Cells(r, 1) = &quot;&quot; Then
+        GoTo Continue
+    End If
+
+Continue:
+
+Next r
+</code></pre></div>
+<h2 id="4-switch">4. switch 文<a class="headerlink" href="#4-switch" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Select Case ～ End Select を使う</li>
+<li>break はいらない</li>
+<li>数値だけでなく、文字も判定可能</li>
+</ul>
+<div class="highlight"><pre><span></span><code>Dim morning
+morning = 1
+Select Case morning
+    Case 1
+        処理1
+    Case 2
+        処理2
+    Case 3
+        処理3
+    Case Else
+        Debug.Print &quot;Zzz...&quot;
+End Select
+</code></pre></div>
+<h2 id="5-while">5. while 文<a class="headerlink" href="#5-while" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Do While ～ Loop を使う</li>
+<li>途中で抜けるときは Exit Do を使う</li>
+</ul>
+<div class="highlight"><pre><span></span><code>Dim i
+i = 0
+
+Do While i &lt; 5
+
+    i = i + 1
+
+    If i = 2 Then
+        Exit Do
+    End If
+
+Loop
 </code></pre></div>
 
 

@@ -6,7 +6,12 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://kzrashi.github.io/vba-grammer/00_print/</loc>
+         <loc>https://kzrashi.github.io/vba-grammer/00_basic/</loc>
+         <lastmod>2024-02-29</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://kzrashi.github.io/vba-grammer/00_operate/</loc>
          <lastmod>2024-02-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
