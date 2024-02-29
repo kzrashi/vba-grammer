@@ -9,3 +9,12 @@ print 関数を使うことで画面に文字や数値を出力することが�
 ```vb
 Debug.print "test"
 ```
+
+- for 文
+
+```vb
+Dim i As Integer
+For i = 1 To 5
+	MsgBox "こんにちは"
+Next i
+```
